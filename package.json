@@ -1,23 +1,14 @@
 {
-  "name": "advanced-scss",
-  "version": "1.0.0",
-  "description": "For profissional batch 1",
-  "main": "index.js",
+  "private": false,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "mix",
+    "watch": "mix watch",
+    "prod": "mix --production"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/doatkolom-learning/advanced-scss.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/doatkolom-learning/advanced-scss/issues"
-  },
-  "homepage": "https://github.com/doatkolom-learning/advanced-scss#readme",
   "devDependencies": {
-    "laravel-mix": "^6.0.49"
+    "laravel-mix": "^6.0.49",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.54.5",
+    "sass-loader": "^12.6.0"
   }
 }
