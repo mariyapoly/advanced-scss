@@ -1,3 +1,5 @@
-let mix = require('laravel-mix');
+const mix = require('laravel-mix');
+require('mix-tailwindcss');
 
-mix.sass('src/master.scss', 'dist');
+mix.sass( 'src/app.scss', 'dist' ).tailwind();
+mix.js( 'src/app.js', 'dist' );
