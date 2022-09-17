@@ -1,0 +1,1 @@
+import './classes/class-6';
