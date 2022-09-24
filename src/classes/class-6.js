@@ -1,4 +1,4 @@
-"use strict";
+//"use strict";
 
 //premitive - reference
 // string -> "one world" 'string'
