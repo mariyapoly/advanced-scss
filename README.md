@@ -1,2 +1,2 @@
 # advanced-scss
-For profissional batch 1
+For profissional batch

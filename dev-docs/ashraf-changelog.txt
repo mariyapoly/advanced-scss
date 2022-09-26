@@ -1,2 +1,0 @@
-== class 3 ==
-added: laravel mix with scss and js compiler 
