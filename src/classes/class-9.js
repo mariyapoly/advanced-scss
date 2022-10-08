@@ -1,38 +1,15 @@
 import databse from '../json/8-database.json';
-
-const enum_divider = {
-    start: 'begin_',
-    end: 'end_'
-}
-
-function isString( prop ) {
-    return typeof prop === 'string'
-}
-// start_header = header;
-// end_header = header;
-function findID( prop, isStart = true ) {
-    const type = isStart ? enum_divider.start : enum_divider.end;
-    const original_id = prop.split(type)[1];
-    return original_id  
-}
-// start_header = end_header
-// end_header = start_header
-function reverseDivider( prop, isStart ) {
-    const type        = isStart ? enum_divider.start : enum_divider.end;
-    const reverseType = isStart ? enum_divider.end : enum_divider.start;
-    const original_id = prop.split(type)[1];
-    return reverseType + original_id;
-}
+import { enum_divider, helper } from '../utils';
 
 const isDivider = function ( prop ) {
     let result = {
         isStart : false,
         isEnd   : false,
     };
-    if( isString( prop ) && ( prop.startsWith( enum_divider.start ) || prop.startsWith( enum_divider.end ) ) ) {
+    if( helper.isString( prop ) && ( prop.startsWith( enum_divider.start ) || prop.startsWith( enum_divider.end ) ) ) {
         const isStart   = prop.startsWith( enum_divider.start );
-        const id        = findID( prop, isStart );
-        const reverse   = reverseDivider( prop, isStart );
+        const id        = helper.findID( prop, isStart );
+        const reverse   = helper.reverseDivider( prop, isStart );
         const type      = isStart ? 'isStart' : 'isEnd';
         
         if( Reflect.has( databse, reverse ) && !Reflect.has( databse, id ) ) {
@@ -53,13 +30,13 @@ for( let property in databse ) {
     let canUse      = true;
 
     if( isStart ) {
-       const id = findID( property );
+       const id = helper.findID( property );
        queue.push( id );
        canUse = false;
     }
 
     if( isEnd ) {
-        const id = findID( property, false );
+        const id = helper.findID( property, false );
         const ind = queue.indexOf( id );
         queue.splice( ind, 1 );
         canUse = false;
@@ -79,7 +56,7 @@ for( let property in databse ) {
     
 }
 
-// console.log(data)
+console.log(data)
 
 
 // const d = new Date();
