@@ -1,0 +1,41 @@
+[
+    {
+        "version": 1,
+        "type": "Exam",
+        "class": "10"
+    },
+    {
+        "__header": null,
+        "logo": "loog.png",
+        "header_top_title": "Discover the world",
+        "contact": "12356789",
+        "__social": null,
+        "fb": ["Facebook", "www.facebook.com"],
+        "tw": ["Twitter", "www.twitter.com"],
+        "in": ["LinkedIN", "www.linkedIn.com"],
+        "_#social": null,
+        "__nav": null,
+        "home": "Home",
+        "about-us": "About us",
+        "contact-us": "Contact Us",
+        "services": "Services",
+        "__mobile": null,
+        "mobile-home": "Mobile home",
+        "mobile-about": "Mobile about",
+        "mobile-services": "Mobile services",
+        "mobile-contact": "Mobile contact",
+        "_#mobile":null,
+        "_#nav": null,
+        "_#header": null
+    },
+    {
+        "__banner": null,
+        "background": "iamge.png",
+        "title": "Hello world",
+        "__button": null,
+        "url": "wwww.domain.com",
+        "label": "Purchase Now",
+        "_#button": null,
+        "_#banner": null
+    }
+]
